@@ -26,13 +26,18 @@ public class Item {
 
    public Item() {
       // TODO: Pick a random item type from itemTypes
+      itemType = getItemType();
    }
    
    public String getItemType() {
+      int itemLength = itemTypes.length;
+      int indexOfItem = (int)(Math.random() * itemLength);
+      String itemType = itemTypes[indexOfItem];
       return this.itemType;
    }
    
    public String toString() {
       // TODO: Build a descriptive String for use by other methods
+      return "Item type: " + itemType;
    }
 }
