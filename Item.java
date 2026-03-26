@@ -1,6 +1,7 @@
 public class Item {
    private String itemType;
    private boolean isEquipped;
+
    private final String[] itemTypes = {
             "Rusty Sword",
             "Healing Potion",
