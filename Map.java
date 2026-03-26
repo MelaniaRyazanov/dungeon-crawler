@@ -4,10 +4,11 @@ public class Map {
    
    public int getNumRows() {
       // TODO: return the number of rows in roomGrid
+ 
    }
    public int getNumCols() {
       // TODO: return the number of columns in roomGrid
-   
+      
    }
 
    public Map(int rows, int columns) {

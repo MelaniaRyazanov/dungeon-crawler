@@ -34,12 +34,11 @@ public class Room {
       String returnString = "Items in room: ";
       // TODO: build a returnString that nicely formats the Monsters and Items in the Room
       // HINT: Use a for-each loop to go through the ArrayLists
-      for(final Item item : itemsInRoom){
+      for(Item item : itemsInRoom){
          returnString += itemsInRoom;
       }
       
-         returnString += " Monsters in room: ";
-      for(final Monster monster : monstersInRoom){
+      for(Monster monster : monstersInRoom){
          returnString += monstersInRoom;
       }
    
