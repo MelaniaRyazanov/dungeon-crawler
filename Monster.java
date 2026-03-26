@@ -26,15 +26,16 @@ private String monsterType;
 
    public Monster() {
       // TODO: Pick a random monster type from monsterTypes
-      monsterType = getMonsterType();
+      int monsterLength = monsterTypes.length;
+      int indexOfMonster = (int)(Math.random() * monsterLength);
+      this.monsterType = monsterTypes[indexOfMonster];
+      
    }
    
    
    public String getMonsterType() {
    
-      int monsterLength = monsterTypes.length;
-      int indexOfMonster = (int)(Math.random() * monsterLength);
-      String monsterType = monsterTypes[indexOfMonster];
+      
       return this.monsterType;
    }
    
