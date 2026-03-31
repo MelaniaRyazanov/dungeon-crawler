@@ -10,6 +10,7 @@ public class Room {
       Room room = new Room();
       System.out.println(room);
    }
+
    public Room() {
       
       // TODO: Generate a random number of monsters and items between 1 and max (inclusive)
