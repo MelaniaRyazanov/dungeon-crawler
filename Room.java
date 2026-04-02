@@ -6,10 +6,10 @@ public class Room {
    private final int maxNumberOfMonsters = 2;
    private final int maxNumberOfItems = 2;
       
-      public static void main(String[]args){
-      Room room = new Room();
-      System.out.println(room);
-   }
+    //  public static void main(String[]args){
+     // Room room = new Room();
+     // System.out.println(room);
+ //  }
 
    public Room() {
       
@@ -36,11 +36,11 @@ public class Room {
       // TODO: build a returnString that nicely formats the Monsters and Items in the Room
       // HINT: Use a for-each loop to go through the ArrayLists
       for(Item item : itemsInRoom){
-         returnString += itemsInRoom;
+         returnString += "\n " + item;
       }
-      
+      returnString += "\nMonsters in room: ";
       for(Monster monster : monstersInRoom){
-         returnString += monstersInRoom;
+         returnString += "\n " + monster;
       }
    
       return returnString;

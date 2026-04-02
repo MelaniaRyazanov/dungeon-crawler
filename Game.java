@@ -10,10 +10,14 @@ public class Game {
       
       // TODO: Create a Map which populates each element of the grid with a Room
       // that contains a random assortment of Monsters and Items
+      //dungeonMap
       
       // TODO: Create a Player at a random location in the Map
       // HINT: Generate random row/column values using Math.random()
       // and pass them into the Player constructor
+      int randomRow = (int)(Math.random() * dungeonMap.getNumRows());
+      int randomCol = (int)(Math.random() * dungeonMap.getNumCols());
+        Player player = new Player(100, "Billy", randomRow, randomCol);
             
       while (exitGame != true) {
             System.out.print("Enter command: ");
@@ -33,9 +37,13 @@ public class Game {
             else if (input.startsWith("MOVE ")) {
                String direction = input.substring(5);
                if (direction.equals("UP")) {
+               
                } else if (direction.equals("DOWN")) {
-               } else if (direction.equals("LEFT")) {    
+               
+               } else if (direction.equals("LEFT")) { 
+                  
                } else if (direction.equals("RIGHT")) {
+              
                } else {
                   System.out.println("You're trying to move in an invalid direction. Please choose UP, DOWN, LEFT or RIGHT");
                }
