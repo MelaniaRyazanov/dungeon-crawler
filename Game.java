@@ -46,10 +46,42 @@ public class Game {
                      System.out.println("Can't move up.");
                   }
                } else if (direction.equals("DOWN")) {
+                  int currentX = player.getCurrentX();
+                  int currentY = player.getCurrentY();
+                  if(currentY - 1 > dungeonMap.getNumRows())
+                  {
+                     player.moveTo(currentX, currentY - 1);
+                     System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
+                   } else {
+                        System.out.println("Can't move down.");
+                        }
+                 
                
                } else if (direction.equals("LEFT")) { 
+                  int currentX = player.getCurrentX();
+                  int currentY = player.getCurrentY();
+                  if(currentX - 1 < dungeonMap.getNumCols())
+                  {
+                     player.moveTo(currentX -1, currentY);
+                     System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
+                    } else {
+                        System.out.println("Can't move left.");
+                        }
+                
+
                   
                } else if (direction.equals("RIGHT")) {
+                  int currentX = player.getCurrentX();
+                  int currentY = player.getCurrentY();
+                  if(currentX < dungeonMap.getNumCols())
+                  {
+                     player.moveTo(currentX -1, currentY);
+                     System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
+                    } else {
+                        System.out.println("Can't move right.");
+                        }
+                 
+
               
                } else {
                   System.out.println("You're trying to move in an invalid direction. Please choose UP, DOWN, LEFT or RIGHT");
