@@ -52,7 +52,7 @@ public class Game {
                   {
                      player.moveTo(currentX, currentY - 1);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
-                   } else if(currentY <= 1) {
+                   } else {
                         System.out.println("Can't move down.");
                         }
                  
@@ -77,7 +77,7 @@ public class Game {
                   {
                      player.moveTo(currentX +1, currentY);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
-                    } else if(currentX <= 1) {
+                    } else  {
                         System.out.println("Can't move right.");
                         }
                  
