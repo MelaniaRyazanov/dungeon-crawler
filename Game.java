@@ -73,9 +73,9 @@ public class Game {
                } else if (direction.equals("RIGHT")) {
                   int currentX = player.getCurrentX();
                   int currentY = player.getCurrentY();
-                  if(currentX < dungeonMap.getNumCols())
+                  if(currentX + 1 < dungeonMap.getNumCols())
                   {
-                     player.moveTo(currentX -1, currentY);
+                     player.moveTo(currentX +1, currentY);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
                     } else {
                         System.out.println("Can't move right.");
