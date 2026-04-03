@@ -48,11 +48,11 @@ public class Game {
                } else if (direction.equals("DOWN")) {
                   int currentX = player.getCurrentX();
                   int currentY = player.getCurrentY();
-                  if(currentY - 1 > dungeonMap.getNumRows())
+                  if(currentY - 1 < dungeonMap.getNumRows())
                   {
                      player.moveTo(currentX, currentY - 1);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
-                   } else {
+                   } else if(currentY <= 1) {
                         System.out.println("Can't move down.");
                         }
                  
@@ -60,7 +60,7 @@ public class Game {
                } else if (direction.equals("LEFT")) { 
                   int currentX = player.getCurrentX();
                   int currentY = player.getCurrentY();
-                  if(currentX - 1 < dungeonMap.getNumCols())
+                  if(currentX - 1 < dungeonMap.getNumCols() )
                   {
                      player.moveTo(currentX -1, currentY);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
@@ -77,7 +77,7 @@ public class Game {
                   {
                      player.moveTo(currentX +1, currentY);
                      System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
-                    } else {
+                    } else if(currentX <= 1) {
                         System.out.println("Can't move right.");
                         }
                  
