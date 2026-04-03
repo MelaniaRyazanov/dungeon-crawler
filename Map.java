@@ -44,7 +44,7 @@ public class Map {
    }
    public Room getRoom(int row, int column) {
       // TODO: return the Room that is at the row and column that are passed
-     return roomGrid[row][column];
+       return roomGrid[row][column]; 
    }
    
    public Room getRandomRoom() {

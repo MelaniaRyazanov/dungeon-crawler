@@ -46,7 +46,7 @@ public class Player {
       // TODO: This method will take the player's current X and Y, and return the contents of the room
       // they are in with a descriptive String
       // HINT: Use map.getRoom(currentX, currentY) and call toString()
-      return map.getRoom(currentX, currentY).toString();
+      return map.getRoom(currentY, currentX).toString();
    }
    public void moveTo(int x, int y) {
       // TODO: Update the Player's currentX and currentY values.
@@ -56,6 +56,12 @@ public class Player {
    
    public Room getRoom(Map map) {
       // TODO: return the room object that the player is currently in, given the Map that was passed
-      return map.getRoom(currentX, currentY);
+      return map.getRoom(currentY, currentX);
+   }
+   public int getCurrentX(){
+      return currentX;
+   }
+   public int getCurrentY(){
+      return currentY;
    }
 }

@@ -37,7 +37,14 @@ public class Game {
             else if (input.startsWith("MOVE ")) {
                String direction = input.substring(5);
                if (direction.equals("UP")) {
-               
+                  int currentX = player.getCurrentX();
+                  int currentY = player.getCurrentY();
+                if(currentY + 1 < dungeonMap.getNumRows())
+              {player.moveTo(currentX, currentY +1);
+                  System.out.println("Player is in: " + player.getCurrentX() + "," + player.getCurrentY());
+                  } else {
+                     System.out.println("Can't move up.");
+                  }
                } else if (direction.equals("DOWN")) {
                
                } else if (direction.equals("LEFT")) { 
